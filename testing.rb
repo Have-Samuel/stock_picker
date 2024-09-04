@@ -6,6 +6,11 @@ def testing(hash)
   # Print the hash
   # The use of "\n" is to create a new line after the print statement
   print "Numbers are: #{hashes_nums}""\n"
+
+  # Create an array that will store numbers_hash keys for reference on the hash index
+  numbers_hash_keys = hashes_nums.keys
+  # This will print the indexes that are the same keys in the hash, ie. [0, 1, 2, 3, 4]
+  print "Numbers_hash_keys are: #{numbers_hash_keys}""\n"
 end
 
 testing = ([10,23,30,14,15])
