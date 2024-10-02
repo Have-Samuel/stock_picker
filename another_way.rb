@@ -1,11 +1,19 @@
 def picker(prices)
+  # Initialize variables
   buy = 0
   sell = 0
   profit = 0
+  # Loop through each day
   prices.each_with_index do |buy_price, buy_day|
+    # Loop through each day after the buy day
+    # to find the best sell day
     prices.each_with_index do |sell_price, sell_day|
+      # If the sell day is after the buy day
+      # and the sell day is after the current sell day
       if sell_day > buy_day
+        # If the profit is greater than the current profit
         if sell_price - buy_price > profit
+          # Set the buy day, sell day, and profit
           buy = buy_day
           sell = sell_day
         end
